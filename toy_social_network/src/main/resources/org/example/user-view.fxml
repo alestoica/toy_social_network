@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserController">
+
+        <TableView fx:id="tableView" layoutX="163.0" layoutY="155.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="156.0" prefWidth="313.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="155.0">
+
+            <columns>
+
+                <TableColumn fx:id="tableColumnUsername" prefWidth="75.0" text="Username" />
+
+            </columns>
+
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+
+        </TableView>
+   <HBox alignment="CENTER" layoutX="268.0" layoutY="311.0" prefHeight="45.0" prefWidth="200.0">
+
+       <padding>
+
+           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+
+       </padding>
+
+     <Button mnemonicParsing="false" onAction="#handlePrev" prefHeight="25.0" prefWidth="61.0" text="Previous" />
+     <Button mnemonicParsing="false" onAction="#handleNext" prefHeight="25.0" prefWidth="61.0" text="Next" />
+
+   </HBox>
+
+    <HBox alignment="CENTER" layoutX="88.0" layoutY="350.0" prefHeight="36.0" prefWidth="462.0" spacing="20.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="124.0">
+
+            <padding>
+
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+
+            </padding>
+
+            <Button mnemonicParsing="false" onAction="#handleAddUser" text="Sign Up" />
+            <Button mnemonicParsing="false" onAction="#handleDeleteUser" text="Remove Account" />
+<!--            <Button mnemonicParsing="false" onAction="#handleUpdateUser" text="Edit User" />-->
+
+        </HBox>
+
+    <Label alignment="CENTER" layoutX="87.0" prefHeight="99.0" prefWidth="562.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Log In to your account" />
+   <ComboBox fx:id="pageSize" layoutX="293.0" layoutY="98.0" prefWidth="150.0" />
+   <Label alignment="CENTER" layoutX="142.0" layoutY="135.0" prefHeight="25.0" prefWidth="452.0" style="-fx-font-size: 10;" text="Double-click on the account you want to log into." />
+   <Label alignment="CENTER" layoutX="142.0" layoutY="73.0" prefHeight="25.0" prefWidth="452.0" style="-fx-font-size: 10;" text="Choose the number of accounts that appear on a page." />
+
+</AnchorPane>

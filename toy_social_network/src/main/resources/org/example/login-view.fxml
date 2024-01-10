@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LogInController">
+    <Label alignment="CENTER" layoutX="19.0" prefHeight="99.0" prefWidth="562.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Log in to your account" />
+
+   <GridPane layoutX="103.0" layoutY="97.0" prefHeight="164.0" prefWidth="394.0">
+
+     <columnConstraints>
+
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="142.0" />
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="252.0" />
+
+     </columnConstraints>
+
+     <rowConstraints>
+       <RowConstraints />
+         <RowConstraints maxHeight="59.333333333333336" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="71.66666666666666" minHeight="8.666666666666657" prefHeight="56.0" />
+
+     </rowConstraints>
+
+       <Label prefHeight="47.0" prefWidth="111.0" text="Username: " GridPane.rowIndex="2" />
+       <Label prefHeight="39.0" prefWidth="111.0" text="Password: " GridPane.rowIndex="3" />
+
+       <TextField fx:id="textFieldUsername" prefHeight="44.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label prefHeight="17.0" prefWidth="123.0" text="Id: " GridPane.rowIndex="1" />
+      <TextField fx:id="textFieldId" layoutX="152.0" layoutY="47.0" prefHeight="44.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <PasswordField fx:id="textFieldPassword" prefHeight="44.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+       
+   </GridPane>
+
+    <ButtonBar layoutX="204.0" layoutY="285.0" prefHeight="40.0" prefWidth="90.0" AnchorPane.bottomAnchor="75.0">
+
+        <buttons>
+
+            <Button mnemonicParsing="false" onAction="#handleLogIn" text="Log In">
+
+                <padding>
+
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+
+                </padding>
+
+            </Button>
+
+            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+
+        </buttons>
+
+        <padding>
+
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+
+        </padding>
+
+    </ButtonBar>
+
+</AnchorPane>

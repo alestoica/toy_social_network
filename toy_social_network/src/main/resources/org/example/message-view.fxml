@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.MessageController">
+
+    <TableView fx:id="tableView" layoutX="39.0" layoutY="123.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="164.0" prefWidth="524.0" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="123.0">
+
+        <columns>
+
+            <TableColumn fx:id="tableColumnFrom" prefWidth="75.0" text="From" />
+            <TableColumn fx:id="tableColumnMessage" prefWidth="75.0" text="Message" />
+
+        </columns>
+
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+
+    </TableView>
+
+    <HBox alignment="CENTER" layoutX="5.0" layoutY="352.0" prefHeight="34.0" prefWidth="655.0" spacing="20.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+      <TextField fx:id="textFieldMessage" />
+
+        <Button mnemonicParsing="false" onAction="#handleSendMessage" text="Send" />
+        <Button mnemonicParsing="false" onAction="#handleReplyMessage" text="Reply" />
+        <Button mnemonicParsing="false" onAction="#handleDeleteMessage" text="Delete" />
+
+    </HBox>
+
+    <Label fx:id="chatLabel" alignment="CENTER" layoutX="1.0" prefHeight="99.0" prefWidth="600.0" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+    <HBox alignment="CENTER" layoutX="203.0" layoutY="290.0" prefHeight="36.0" prefWidth="200.0">
+
+        <padding>
+
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+
+        </padding>
+
+        <Button mnemonicParsing="false" onAction="#handlePrev" text="Previous" />
+        <Button mnemonicParsing="false" onAction="#handleNext" text="Next" />
+
+    </HBox>
+
+    <ComboBox fx:id="pageSize" layoutX="230.0" layoutY="86.0" prefWidth="150.0" />
+   <Label fx:id="chatLabel1" alignment="CENTER" layoutX="82.0" layoutY="64.0" prefHeight="27.0" prefWidth="446.0" style="-fx-font-size: 10;" text="Choose how many messages appear on a page." />
+
+</AnchorPane>

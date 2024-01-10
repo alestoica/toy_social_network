@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="265.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SendFriendRequestController">
+
+    <ComboBox fx:id="comboBox" layoutX="128.0" layoutY="135.0" prefWidth="150.0" />
+
+    <Label alignment="CENTER" layoutX="1.0" prefHeight="142.0" prefWidth="404.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Send a friend request to: " />
+
+    <Button layoutX="181.0" layoutY="194.0" mnemonicParsing="false" onAction="#handleSend" text="Send" />
+
+</AnchorPane>
